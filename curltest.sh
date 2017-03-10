@@ -1,17 +1,16 @@
 #!/bin/bash
 # test timing script
 
-# c=$(curl -o /dev/null -s -w "%{time_pretransfer}\n" stetson.edu);
-
 a=0;
 d=0;
 n=0;
+s=5;
 
 curlit() {
 	curl -o /dev/null -s -w "%{time_pretransfer}\n" $1
 }
 
-for((i=0; i<5; i++))
+for((i=0; i<$s; i++))
 	do
 	curlres=$(curlit $1)
 	echo "curl once: $curlres";
@@ -24,7 +23,5 @@ for((i=0; i<5; i++))
 	sleep 0.25
 done
 
-d=$(echo "$a/5" | bc -l;)
-echo "curl avg: 0$d";
-
-
+d=$(echo "$a/$s" | bc -l;)
+echo "curl avg: $d";
