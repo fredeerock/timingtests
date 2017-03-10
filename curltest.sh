@@ -10,6 +10,9 @@ curlit() {
 	curl -o /dev/null -s -w "%{time_pretransfer}\n" $1
 }
 
+curlfirst=$(curlit $1)
+echo "first one: $curlfirst";
+
 for((i=0; i<$s; i++))
 	do
 	curlres=$(curlit $1)
