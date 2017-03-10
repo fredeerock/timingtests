@@ -1,0 +1,64 @@
+#HIVE curl tests local ethernet
+
+- smallest avg: 0.007 on hive12.cct.lsu.edu
+- smallest min: 0.006 on hive12.cct.lsu.edu
+- smallest max: 0.010 on hive12.cct.lsu.ed and lsu.edu
+
+- biggest avg: 0.016 on emdm.io
+- biggest min: 0.010 on atlab.cct.lsu.edu
+- biggest max: 0.039 on emdm.io
+
+# Raw Data
+
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.009
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.009
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.010
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.009
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.009
+--------------------------------
+avg: 0.009 min: 0.009 max: 0.010
+--------------------------------
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.012
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.012
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.012
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.013
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.010
+--------------------------------
+avg: 0.012 min: 0.010 max: 0.013
+--------------------------------
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.039
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.011
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.011
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.010
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.009
+--------------------------------
+avg: 0.016 min: 0.009 max: 0.039
+--------------------------------
+curl -o /dev/null -s -w "%{time_total}\n" hive12.cct.lsu.edu
+0.010
+curl -o /dev/null -s -w "%{time_total}\n" hive12.cct.lsu.edu
+0.007
+curl -o /dev/null -s -w "%{time_total}\n" hive12.cct.lsu.edu
+0.006
+curl -o /dev/null -s -w "%{time_total}\n" hive12.cct.lsu.edu
+0.007
+curl -o /dev/null -s -w "%{time_total}\n" hive12.cct.lsu.edu
+0.007
+--------------------------------
+avg: 0.007 min: 0.006 max: 0.010
+--------------------------------

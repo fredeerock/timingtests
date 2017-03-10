@@ -1,0 +1,51 @@
+#HIVE curl tests external cell
+
+- smallest avg: 0.329 on emdm.io
+- smallest min: 0.155 on emdm.io
+- smallest max: 0.907 on emdm.io
+
+- biggest avg: 0.430 on atlab.cct.lsu.edu
+- biggest min: 0.294 on lsu.edu
+- biggest max: 1.232 on atlab.cct.lsu.edu
+
+# Raw Data
+
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.801
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.312
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.320
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.404
+curl -o /dev/null -s -w "%{time_total}\n" lsu.edu
+0.294
+--------------------------------
+avg: 0.426 min: 0.294 max: 0.801
+--------------------------------
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.442
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.166
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+1.232
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.157
+curl -o /dev/null -s -w "%{time_total}\n" atlab.cct.lsu.edu
+0.157
+--------------------------------
+avg: 0.430 min: 0.157 max: 1.232
+--------------------------------
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.907
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.173
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.209
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.199
+curl -o /dev/null -s -w "%{time_total}\n" emdm.io
+0.155
+--------------------------------
+avg: 0.329 min: 0.155 max: 0.907
+--------------------------------
